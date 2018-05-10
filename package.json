@@ -6,6 +6,9 @@
   "repository": "git@github.com:leanderlee/ctl-pg.git",
   "author": "Leander Lee <me@leander.ca>",
   "license": "MIT",
+  "peerDependencies": {
+    "ctl": ">=1"
+  },
   "dependencies": {
     "pg": "^7.4.3",
     "pg-pool": "^2.0.3"
