@@ -1,0 +1,13 @@
+{
+  "name": "ctl-pg",
+  "version": "1.0.0",
+  "description": "CTL Postgres wrapper",
+  "main": "index.js",
+  "repository": "git@github.com:leanderlee/ctl-pg.git",
+  "author": "Leander Lee <me@leander.ca>",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^7.4.3",
+    "pg-pool": "^2.0.3"
+  }
+}
