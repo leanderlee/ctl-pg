@@ -7,7 +7,7 @@
   "author": "Leander Lee <me@leander.ca>",
   "license": "MIT",
   "peerDependencies": {
-    "ctl": ">=1"
+    "ctl": ">=1.0.0"
   },
   "dependencies": {
     "pg": "^7.4.3",
