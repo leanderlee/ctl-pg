@@ -1,7 +1,7 @@
-const Pool = require('pg-pool');
 const ctl = require('ctl');
-const log = ctl.library('logging')('pg');
-const config = ctl.library('config');
+const Pool = require('pg-pool');
+const log = require('library/logging')('pg');
+const config = require('library/config');
 
 let pool;
 const {
@@ -56,7 +56,15 @@ async function hasTable() {
   return (rowCount > 0);
 }
 
-exports.metainfo = () => {
+exports.connect = async () => {
+  log.info('Connecting to DB:', host, port, database);
+  pool = new Pool(options);
+};
+
+exports.pool = () => pool;
+exports.query = query;
+
+ctl.metainfo(async () => {
   if (!pool) return;
   return {
     set: async (val) => {
@@ -84,12 +92,4 @@ exports.metainfo = () => {
       return JSON.parse(rows[0].value);
     },
   };
-};
-
-exports.connect = async () => {
-  log.info('Connecting to DB:', host, port, database);
-  pool = new Pool(options);
-};
-
-exports.pool = () => pool;
-exports.query = query;
+});
