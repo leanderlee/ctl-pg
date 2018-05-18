@@ -1,7 +1,7 @@
 const ctl = require('ctl');
 const Pool = require('pg-pool');
-const log = require('library/logging')('pg');
-const config = require('library/config');
+const log = ctl.library('logging')('pg');
+const config = ctl.library('config');
 
 let pool;
 const {
