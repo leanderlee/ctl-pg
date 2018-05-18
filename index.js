@@ -57,7 +57,7 @@ async function hasTable() {
 }
 
 exports.connect = async () => {
-  log.info('Connecting to DB:', host, port, database);
+  log.info('Connect DB (pg://%s:%s):', host, port, database);
   pool = new Pool(options);
 };
 
