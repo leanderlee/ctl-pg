@@ -64,6 +64,7 @@ exports.connect = async () => {
 exports.pool = () => pool;
 exports.query = query;
 
+ctl.connect(exports.connect);
 ctl.metainfo(async () => {
   if (!pool) return;
   return {
