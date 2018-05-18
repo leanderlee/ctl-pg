@@ -1,6 +1,6 @@
 {
   "name": "ctl-pg",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "description": "CTL Postgres wrapper",
   "main": "index.js",
   "repository": "git@github.com:leanderlee/ctl-pg.git",
